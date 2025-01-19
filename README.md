@@ -24,11 +24,11 @@ Este repositório contém um sistema de recomendação de filmes baseado em algo
 
 ## Requisitos
 
-Certifique-se de que tem as bibliotecas necessárias instaladas antes de executar o notebook.
+Certifique-se de que tem as bibliotecas necessárias instaladas antes de executar o .ipynb.
 
 ### Bibliotecas
 
-As seguintes bibliotecas foram utilizadas:
+As seguintes bibliotecas que foram utilizadas:
 - `pandas`
 - `numpy`
 - `matplotlib`
@@ -62,31 +62,52 @@ Abra o notebook num ambiente como Google Colab, Jupyter Notebook ou VS Code.
 O sistema exibirá opções para que escolha o filme pretendido.
 
 # Análises Realizadas
-Análise Exploratória
+**Análise Exploratória**
 - Evolução Temporal de Filmes: Gráfico de linha que mostra a quantidade de filmes lançados ao longo dos anos.
 - Contagem por Género: Gráfico de barras que apresenta a popularidade de cada género.
 - Média de Avaliação por Género: Comparação das avaliações médias de diferentes géneros.
 - Top 10 Filmes com Mais Votos: Lista dos filmes com maior número de votos no IMDb.
 - Matriz de Correlação: Análise de correlação entre variáveis numéricas, como rating e votes.
 # Modelagem
-- SVD (Singular Value Decomposition): Algoritmo utilizado para prever avaliações de filmes.
-- Nearest Neighbors: Modelo para sugerir filmes semelhantes com base em características combinadas.
-
+**Nearest Neighbors:**
+- Recomendação de filmes semelhantes com base em características combinadas.
+- Não depende de classificações fornecidas pelo utilizador.
+**SVD:**
+- Previsão de avaliações para títulos com base em padrões históricos.
+- Permite comparação de métricas como RMSE e Precision@K.
 
 # Exemplos de Utilização
-Entrada
+**Entrada**
 O utilizador pode introduzir títulos de filmes:
 
 ```
 user_input = ['Inception', 'Avatar']
 ```
-Saída
+**Saída**
 O sistema retorna uma tabela estilizada com recomendações relevantes.
 
+
+# Métricas de Avaliação
+**Precision@K:**
+Mede a proporção de filmes relevantes entre os K primeiros recomendados.
+Considerado relevante se o rating >= 7.0.
+**RMSE (Root Mean Squared Error):**
+Avalia a precisão do modelo SVD nas previsões de ratings.
+
+
 # Resultados
-RMSE: O modelo foi avaliado com um RMSE de aproximadamente 0.0639, indicando previsões precisas.
-Gráficos interativos e tabelas detalhadas ajudam a compreender os resultados.
-Visualizações
-- Evolução Temporal de Filmes:
-- Top 10 Filmes com Mais Votos:
-- Média de Avaliação por Género:
+**Nearest Neighbors:**
+- Modelo mais adequado para recomendações baseadas em títulos, já que não requer input de ratings.
+**SVD:**
+- Útil para cenários onde dados de avaliações de utilizadores estão disponíveis.
+- RMSE alcançado: 0.0615.
+
+# Visualizações Disponíveis
+**Gráficos Exploratórios:**
+- Evolução temporal de filmes.
+- Relação entre votos e ratings (escala logarítmica).
+- Matriz de correlação.
+
+**Gráficos de Recomendação:**
+- Similaridade entre filmes recomendados (1 - distância).
+- Distribuição de géneros entre recomendações.
