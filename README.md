@@ -98,6 +98,7 @@ Avalia a precisão do modelo SVD nas previsões de ratings.
 # Resultados
 **Nearest Neighbors:**
 - Modelo mais adequado para recomendações baseadas em títulos, já que não requer input de ratings.
+  
 **SVD:**
 - Útil para cenários onde dados de avaliações de utilizadores estão disponíveis.
 - RMSE alcançado: 0.0615.
