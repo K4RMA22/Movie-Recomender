@@ -90,7 +90,7 @@ O sistema retorna uma tabela estilizada com recomendações relevantes.
 # Métricas de Avaliação
 **Precision@K:**
 Mede a proporção de filmes relevantes entre os K primeiros recomendados.
-Considerado relevante se o rating >= 7.0.
+Considerado relevante se o rating >= 6.0.
 **RMSE (Root Mean Squared Error):**
 Avalia a precisão do modelo SVD nas previsões de ratings.
 
