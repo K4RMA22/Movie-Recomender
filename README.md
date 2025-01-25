@@ -72,6 +72,7 @@ O sistema exibirá opções para que escolha o filme pretendido.
 **Nearest Neighbors:**
 - Recomendação de filmes semelhantes com base em características combinadas.
 - Não depende de classificações fornecidas pelo utilizador.
+- 
 **SVD:**
 - Previsão de avaliações para títulos com base em padrões históricos.
 - Permite comparação de métricas como RMSE e Precision@K.
